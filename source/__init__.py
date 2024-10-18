@@ -1,10 +1,11 @@
 import requests
 from .interactions import Interactions
 from .tools import Tools
+from .scrapper import Scrapper
 from .other import domain, save
 
 
-class Start(Interactions, Tools):
+class Start(Interactions, Tools, Scrapper):
     # Session generator
     # sign using cookie or username and password
     def __init__(self, cookie: str = None, username: str = None, password: str = None) -> None:
@@ -17,5 +18,6 @@ class Start(Interactions, Tools):
         # branch
         Interactions.__init__(self, self.ses)
         Tools.__init__(self, self.ses)
+        Scrapper.__init__(self, self.ses)
 
 
