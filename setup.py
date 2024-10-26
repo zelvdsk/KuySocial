@@ -3,7 +3,7 @@ import setuptools
 setuptools.setup(
     author= 'Ipan (zelvdsk)',
     description= 'Automation For KuySocial',
-    entry_points= {'console_scripts': ['KuySocial=source:Start']},
+    entry_points= {'console_scripts': ['kuysocial=kuysocial:Start']},
     install_requires= [
         'requests', 
         'bs4'
@@ -16,8 +16,8 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    keywords= ['Automation', 'soacial network'],
-    name= 'KuySocial',
+    keywords= ['Automation', 'social network'],
+    name= 'kuysocial',
     packages=setuptools.find_packages(),
     version='1.0.1'
 )
